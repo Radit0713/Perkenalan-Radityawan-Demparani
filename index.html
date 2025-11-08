@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head><style>/* Reset dasar untuk konsistensi di semua browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body utama dengan background gradien */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradien ungu-biru */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #4a148c; /* Ungu gelap */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header .tagline {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 6px solid #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Section umum styling */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #4a148c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
+}
+
+/* About section */
+.about p {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Experience section */
+.experience ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #667eea;
+    border-radius: 5px;
+}
+
+.experience strong {
+    color: #4a148c;
+}
+
+/* Projects section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #4a148c;
+}
+
+/* Hobbies section */
+.hobbies p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.hobby-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+.contact p {
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #4a148c;
+}
+
+/* Tombol interaktif */
+#salam-btn {
+    display: block;
+    margin: 30px auto;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#salam-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsif untuk tablet dan mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    section {
+        padding: 20px;
+        margin: 15px 10px;
+    }
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        max-width: 100%;
+    }
+    #profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+    #salam-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan Diri - Radit</title>
+    <!-- Link ke CSS eksternal jika Anda punya file styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Halo, Saya Radityawan demparani!</h1>
+        <img src="image/WhatsApp Image 2025-11-08 at 10.18.27.jpeg"
+         alt="Foto Profil Saya" 
+          width="200" 
+          class="profile-pic">
+        <p class="tagline"> "Belajar membuat web, membangun masa depan digital"</p>
+    </header>
+
+    <section class="about">
+        <h2>Tentang Saya</h2>
+        <p> 
+            saya berasal dari <strong>kota jambi</strong> dan merupakan anak dari bapak khalikin damn ibu badriyah. saya memiliki tiga orang saudara, maksudnya empat dengan <mark>FALYOLA </mark> dan saat ini saya adalah murid di <strong>SMPN 4 KOTA JAMBI</strong>.
+        </p>
+         <p>
+            Saya memiliki minat besar dalam <strong>membangun website</strong> serta memahami bagaimana teknologi dapat membantu kehidupan sehari-hari. motivasi saya adalah untuk terus belajar setiap hari, meningkatkan kemampuan diri, dan suatu saat nanti menjadi pengembang web yang handal serta bermanfaat bagi banyak orang.
+        </p>
+    </section>
+
+    <section class="experience">
+        <h2>Pengalaman & Pendidikan</h2>
+        <ul>
+            <li><strong>2018-2024</strong>:Di SDN 157 KOTA JAMBI menjadi siswa yang teladan</li>
+            <li><strong>2024-2025</strong>:Di SMPN 4 KOTA JAMBI menjadi siswa aktif dalam segala bidang</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Proyek Favorit</h2>
+        <div class="project-card">
+            <h3>mengarahkan pengguna ke bagian lain dari halaman HTML yang sama</h3>
+            <p>Deskripsi : Saya buat website ini menggunakan HTML untuk menampilkan karya saya.</p>
+            <a href="file:///D:/folder%20latihan/jamuan_13.html" target="_blank">kepo sama proyek??</a>
+        </div>
+        <div class="project-card">
+            <h3>membuat web pengelan diri</h3>
+            <p>Deskripsi : saya buat website ini supaya semua orang dapat mengenal saya.</p>
+            <a href="file:///D:/folder%20latihan/perkenalan%20diri/html.html" target="_blank">kepo sama proyek??</a>
+        </div>
+    </section>
+
+    <section class="hobbies">
+        <h2>Hobi & Minat</h2>
+        <ol type="I">
+        <p>
+           <li> Saya memiliki beberapa hobi dan minat yang sangat saya ikmati. saya senang <strong>membuat dan mengembangkan website</strong> karena bisa menyalurkan ide kreatif serta melatih kemampuan berfikir logis.        
+        <br>
+         <img src="image/download.jpg"
+         alt="Foto hobi Anda"
+         width="200"
+         class="profile-pic">
+           </br>
+           </li>
+        </p>
+        <li>Saya juga gemar <strong>bermain game</strong> untuk bersantasi sekaligus mengasah strategi berpikir. Game membantu saya belajar tentang kerja sama tim, perencanaan, dan ketekunan dalam menghadapi tantangan.
+            <br>
+            <img src="image/_Online game_, baik atau buruk untuk remaja_.jpg"
+            alt ="Foto hobi Anda"
+            width="200"
+            class="profile-pic">
+        </br>
+        </li>
+        <p><li>Jika ada waktu luang,saya suka <strong>menggambar</strong> sebagai cara untuk mengekspresikan imajinasi dan meningkatkan kreativitas.</li>
+        <br>
+        <img src="image/download (1).jpg"
+         alt="foto hobi anda"
+         width="200"
+         class="profile-pic">
+        </br>
+        </p>
+          </ol>
+      
+    <section class="contact">
+        <h2>Kontak & Media Sosial</h2>
+        <p>Tiktok: <a href="https://WWW.tiktok.com/Radit/" target="_blank">@Radit</a></p>
+        <p>Instagram: <a href="https://WWW.instagram.com/r4d_xz/" target="_blank">@r4d_xz</a></p>
+    </section>
+
+    <!-- Tombol interaktif dari JavaScript sebelumnya -->
+    <button id="salam-btn">Klik untuk Salam!</button>
+
+    <!-- Link ke JS eksternal jika Anda punya file script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

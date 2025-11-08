@@ -1,0 +1,222 @@
+/* Reset dasar untuk konsistensi di semua browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body utama dengan background gradien */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradien ungu-biru */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    color: #4a148c; /* Ungu gelap */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header .tagline {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 6px solid #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Section umum styling */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #4a148c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
+}
+
+/* About section */
+.about p {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Experience section */
+.experience ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #667eea;
+    border-radius: 5px;
+}
+
+.experience strong {
+    color: #4a148c;
+}
+
+/* Projects section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #4a148c;
+}
+
+/* Hobbies section */
+.hobbies p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.hobby-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+.contact p {
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #4a148c;
+}
+
+/* Tombol interaktif */
+#salam-btn {
+    display: block;
+    margin: 30px auto;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#salam-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsif untuk tablet dan mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    section {
+        padding: 20px;
+        margin: 15px 10px;
+    }
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        max-width: 100%;
+    }
+    #profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+    #salam-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
